@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to our Movie website">
+    <script src="script.js"></script>
+    <title>Home Page
+    </title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: #fffdfd;
+        }
+
+        h1 a:hover {
+            opacity: 0.8;
+        }
+
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        h2 a {
+            color: #ffffff;
+            text-decoration-color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        h2 a:hover {
+            opacity: 0.9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .movie-poster {
+            float: left;
+            width: 49%;
+
+            padding: 5px;
+
+        }
+
+        .movie-poster a {
+            display: block;
+
+
+        }
+
+        .movie-poster:hover {
+            opacity: 0.9;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
+        li a.contact:hover {
+            color: white;
+            background-color: rgb(119, 119, 119);
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        li {
+            float: left;
+
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li a:hover {
+            background-color: #161616;
+            color: white;
+        }
+
+        .active {
+            background-color: rgb(224, 240, 5);
+            color: #111;
+        }
+
+        .pulp a,
+        .incept a {
+            text-decoration: none;
+            color: #f8ecec;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .pulp a:hover,
+        .incept a:hover {
+            color: #757575;
+        }
+
+        .pulpinfo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-color: #000000;
+            color: white;
+        }
+
+        .inceptioninfo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .box {
+            float: left;
+            width: 49%;
+            padding: 5px;
+            height: 300px;
+        }
+
+        .box p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        footer {
+            background-clip: border-box;
+            float: left;
+            width: 100%;
+            height: 25px;
+            color: rgb(58, 58, 58);
+            background-color: rgba(224, 240, 5, 0.7);
+            padding: 5px 10px;
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <ul>
+        <li><a href="/main/index.html" class="active">Home</a></li>
+        <li><a href="/main/news.html">News</a></li>
+        <li><a href="/main/aboutus.html">About Us</a></li>
+        <li><a href="mailto:movieproject2121@gmail.com" class="contact">Contact Us </a></li>
+
+
+    </ul>
+
+    <h1><a href="https://www.imdb.com/list/ls022714347/"> Imdb Top 15 movies : </a></h1>
+
+
+    <div class="clearfix">
+        <div class="movie-poster">
+            <h2><a href="/pulpfiction/pulpfiction.html">9 - Pulp Fiction :</a></h2>
+            <a href="/pulpfiction/pulpfiction.html">
+                <img src="/media/pics/pulpfiction-poster.png" alt="pulpfiction-poster" style="width:100%;">
+            </a>
+            <div class="pulp"><a href="/pulpfiction/pulpfiction.html"> Pulp Fiction </a></div>
+            <div class="pulpinfo"> Crime · Drama <br>
+                1994 ·
+                2h 34m ·
+                18
+                <br>
+                <span style="background-color: rgb(84, 167, 42);">95</span> Metascore
+            </div>
+
+        </div>
+
+
+        <div class="movie-poster">
+            <h2><a href="/inception/inception.html">11 - Inception :</a></h2>
+            <a href="/inception/inception.html">
+                <img src="/media/pics/inception-poster-3.png" alt="inception-poster" style="width:100%;">
+            </a>
+            <div class="incept"><a href="/inception/inception.html">Inception</a></div>
+            <div class="inceptioninfo">Action · Adventure · Sci-Fi<Br>
+                2010 ·
+                2h 28m ·
+                12A
+                <br>
+                <span style="background-color: rgb(84, 167, 42);">74</span> Metascore
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="box">
+        <p>The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in
+            four tales of violence and redemption.</p>
+    </div>
+
+    <div class="box">
+        <p>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task
+            of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to
+            disaster.</p>
+    </div>
+
+
+    <footer>
+        © 2024 ObamaMovieReviews. All movie reviews and content on this website are protected by copyright law. All
+        rights reserved.
+    </footer>
+
+
+</body>
+
+</html>

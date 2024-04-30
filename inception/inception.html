@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Inception" content="Inception's Movie Review">
+    <script src="script.js"></script>
+    <title>Inception</title>
+    <script src="/javascript1.js"></script>
+    <style>
+        body {
+            background-color: #f4e9d1;
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #incep-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2e2c28;
+        }
+
+        li {
+            float: left;
+        }
+
+        #moviesgang {
+            float: right;
+            padding: 14px 16px;
+            font-size: 18px;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li a:hover {
+            background-color: #161616;
+            color: white;
+        }
+
+        .incep-movie-info {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f4e9d1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        .incep-info {
+            margin-left: 20px;
+        }
+
+        .incep-details {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .incep-title {
+            font-size: 33px;
+            margin-bottom: 10px;
+        }
+
+        .incep-desc {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: none;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .incep-reviews a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .incep-reviews a:hover {
+            text-decoration: underline;
+        }
+
+        .incep-reviews-table {
+            width: 80%;
+            border-collapse: collapse;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .incep-reviews-table th,
+        .incep-reviews-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .incep-reviews-table tr:hover {
+            background-color: #dfd4be;
+        }
+
+        .incep-btc-desc {
+            margin-top: 20px;
+        }
+
+        .incep-btc-desc h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .incep-btc-desc p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .incep-change-movie-poster {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .incep-change-movie-poster button {
+            margin: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 10px 25px;
+        }
+
+        .incep-change-movie-poster button:hover {
+            background-color: rgb(71, 71, 71);
+        }
+
+        #incep-MoreDetails {
+            text-align: center;
+            display: none;
+
+        }
+
+        #incep-MoreDetails ul {
+            color: #1b1b1b;
+            background-color: #f4e9d1;
+            list-style-type: disc;
+            padding-bottom: 20px;
+            font-size: 18px;
+
+        }
+
+
+
+
+        .incep-extrainfo-button button {
+            background-color: #f4e9d1;
+            color: #161616;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="/main/index.html">Home</a></li>
+        <li><a href="/main/news.html">News</a></li>
+        <li><a href="/main/aboutus.html">About Us</a></li>
+        <li><a href="mailto:movieproject2121@gmail.com" class="contact">Contact Us</a></li>
+        <li id="moviesgang">MoviesGang &#128253</li>
+    </ul>
+
+    <div id="incep-body">
+        <div class="incep-movie-info">
+            <img id="incep-poster-main-pic" src="/media/pics/inception-poster.png" alt="inception-poster" width="320"
+                height="480">
+            <div class="incep-change-movie-poster">
+                <button class="incep-changeposterbutton"
+                    onclick="document.getElementById('incep-poster-main-pic').src='/media/pics/inception-alt-poster-1.jpg'">1</button>
+                <button class="incep-changeposterbutton"
+                    onclick="document.getElementById('incep-poster-main-pic').src='/media/pics/inception-poster.png'">2</button>
+                <button class="incep-changeposterbutton"
+                    onclick="document.getElementById('incep-poster-main-pic').src='/media/pics/inception-alt-poster-2.jpg'">3</button>
+            </div>
+
+            <div class="incep-info">
+                <h1 class="incep-title">Inception</h1>
+                <p class="incep-desc">Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction,
+                    stealing valuable secrets from deep within the subconscious during the dream state, when the mind is
+                    at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new
+                    world of corporate espionage, but it has also made him an international fugitive and cost him
+                    everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could
+                    give him his life back but only if he can accomplish the impossible, inception. Instead of the
+                    perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to
+                    steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of
+                    careful planning or expertise can prepare the team for the dangerous enemy that seems to predict
+                    their every move. An enemy that only Cobb could have seen coming.</p>
+                <br>
+                Action · Adventure · Sci-Fi<br>
+                2010 · 2h 28m · 12A<br>
+                <span style="background-color: rgb(84, 167, 42);">74</span> Metascore
+                <table>
+                    <tr>
+                        <th>Director:</th>
+                        <td>Christopher Nolan</td>
+                    </tr>
+                    <tr>
+                        <th>Writer:</th>
+                        <td>Christopher Nolan</td>
+                    </tr>
+                    <tr>
+                        <th>Stars:</th>
+                        <td>Leonardo DiCaprio · Joseph Gordon-Levitt · Elliot Page</td>
+                    </tr>
+                </table>
+                <div class="incep-reviews">
+                    <a href="https://www.imdb.com/title/tt1375666/reviews/?ref_=tt_ov_rt">4.8K User reviews</a> ·
+                    <a href="https://www.imdb.com/title/tt1375666/externalreviews/?ref_=tt_ov_rt">469 Critic reviews</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="incep-details">
+            <h2>Details :</h2>
+            <table>
+                <tr>
+                    <th>Release Date</th>
+                    <td>July 16, 2010 (United Kingdom)</td>
+                </tr>
+                <tr>
+                    <th>Country of origin</th>
+                    <td>United States · United Kingdom</td>
+                </tr>
+                <tr>
+                    <th>Languages</th>
+                    <td>English · Japanese · French</td>
+                </tr>
+                <tr>
+                    <th>Production companies</th>
+                    <td>Warner Bros. · Legendary Entertainment · Syncopy</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="incep-reviews-table">
+            <h2>Read Some Of The Reviews : </h2>
+            <table class="incep-reviews-table">
+                <tr>
+                    <th>Username</th>
+                    <td>Review</td>
+                    <td>Overall Rating</td>
+                </tr>
+                <tr>
+                    <th>Quinoa1984</th>
+                    <td>One of the Best Film's I've Seen In A LONG Time... and still is</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <th>clipturnity</th>
+                    <td>Matrix but in dreamworld? Nah.</td>
+                    <td>9/10</td>
+                </tr>
+                <tr>
+                    <th>srcooper-756-646671</th>
+                    <td>Is it possible the makers understand how incredible this film is?</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <th>mrmocun</th>
+                    <td>Inception was only less shocking to me than the Matrix</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <th>forzosky</th>
+                    <td>Generation defining.</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <th>konradbuczak</th>
+                    <td>Wait, did i just watch this or is it just a dream?</td>
+                    <td>8/10</td>
+                </tr>
+                <tr>
+                    <th>naman-avastol</th>
+                    <td>Insanely Brilliant ! Nolan has outdone himself !!</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <th>dario_van_kuschn</th>
+                    <td>Inception has a lot of ideas and it doesn't do anything with them</td>
+                    <td>6/10</td>
+                </tr>
+                <tr>
+                    <th>Ch4ndler_B1ng</th>
+                    <td>Didn't win Best Picture? WHAT?</td>
+                    <td>10/10</td>
+                </tr>
+            </table>
+        </div>
+        <div class="incep-extrainfo-button">
+            <h3>Show More Details About The Movie And BTC :
+                <button onclick="toggleDetails1()">Show More</button>
+            </h3>
+        </div>
+        <div id="incep-MoreDetails">
+
+            <p class="incep-extrainfo" style="display: none;">
+            <ul>
+                <li>Director's Vision: Director Christopher Nolan wanted to create a mind-bending experience that
+                    explored
+                    the depths of the subconscious mind. He meticulously crafted the film's intricate plot and stunning
+                    visual effects to immerse viewers in a surreal world of dreams within dreams.
+                    Casting: The film features a talented ensemble cast including Leonardo DiCaprio, Joseph
+                    Gordon-Levitt,
+                    and Elliot Page. Each actor brought depth and complexity to their characters, contributing to the
+                    film's
+                    captivating performances.
+                </li> <br>
+                <li>Practical Effects: Despite the film's ambitious scale and visual effects, Nolan prioritized
+                    practical filmmaking techniques wherever possible. This included building real sets and using
+                    practical
+                    effects to create the gravity-defying sequences that became iconic to the film.</li> <br>
+                <li>Soundtrack: The haunting and atmospheric score of "Inception" was composed by Hans Zimmer. His music
+                    became an integral part of the film, heightening tension and emotion throughout key scenes.
+                    Critical Reception: "Inception" received widespread critical acclaim upon its release, with praise
+                    for
+                    its originality, visuals, and thought-provoking narrative. It went on to become one of the
+                    highest-grossing and most influential films of its time, solidifying Christopher Nolan's reputation
+                    as a
+                    visionary filmmaker.
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="incep-trailer">
+            <h2>Watch The Trailer :</h2>
+            <video id="incep-video-1" width="720px" height="480px" controls>
+                <source src="/media/videos/Inception-Official-Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+
+
+
+    </div>
+    <div class="incep-btc-desc">
+        <h3>Full Cast & Crew : </h3>
+        <p>
+            <iframe src="https://www.tvguide.com/movies/inception/cast/2030008942/" frameborder="0" width="100%"
+                height="650px"></iframe>
+        </p>
+    </div>
+    <br><br><br><br><br><br>
+
+
+
+    <audio autoplay loop id="incep-audio-1">
+        <source src="/media/audio/Hans Zimmer - Time (Official Audio).mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+
+</html>

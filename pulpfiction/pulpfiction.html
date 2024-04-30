@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="pulpfiction" content="Pulp Fiction's Movie Review">
+    <script src="script.js"></script>
+    <title>Pulp Fiction</title>
+    <script src="/javascript1.js">
+    </script>
+    <style>
+        #pf-body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li a.contact:hover {
+            color: white;
+            background-color: rgb(119, 119, 119);
+        }
+
+        #moviesgang {
+            float: right;
+            padding: 14px 16px;
+            font-size: 18px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li a:hover {
+            background-color: #161616;
+            color: white;
+        }
+
+        .active {
+            background-color: rgb(224, 240, 5);
+            color: #111;
+        }
+
+        .pf-movie-info {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .pf-info {
+            margin-left: 20px;
+        }
+
+        .pf-details {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .pf-title {
+            margin-bottom: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .pf-desc {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        th,
+        td {
+            border: none;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .pf-reviews a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .pf-reviews a:hover {
+            text-decoration: underline;
+        }
+
+        .pf-reviews-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        .pf-reviews-table th,
+        .pf-reviews-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+
+        .pf-reviews-table tr:hover {
+            background-color: #302f2f;
+        }
+
+        .pf-btc-desc {
+            margin-top: 20px;
+        }
+
+        .pf-btc-desc h3 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .pf-btc-desc p {
+            color: white;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .pf-change-movie-poster button {
+            margin-left: 40px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 10px 25px 10px 25px;
+
+        }
+
+        .pf-change-movie-poster button:hover {
+            background-color: rgb(71, 71, 71);
+        }
+
+        #pf-MoreDetails {
+            text-align: center;
+            display: none;
+
+        }
+
+        #pf-MoreDetails ul {
+            color: #ffffff;
+            background-color: #000000;
+            list-style-type: disc;
+            padding-bottom: 20px;
+            font-size: 16px;
+
+        }
+
+
+
+
+        .pf-extrainfo-button button {
+            background-color: #0c0c0c;
+            color: #ffffff;
+
+        }
+
+        .pf-extrainfo-button button:hover {
+            background-color: #555454;
+        }
+    </style>
+</head>
+
+<body id="pf-body">
+    <ul>
+        <li><a href="/main/index.html">Home</a></li>
+        <li><a href="/main/news.html">News</a></li>
+        <li><a href="/main/aboutus.html">About Us</a></li>
+        <li><a href="mailto:movieproject2121@gmail.com" class="contact">Contact Us</a></li>
+        <li id="moviesgang">MoviesGang &#128253</li>
+    </ul>
+
+    <div class="pf-movie-info">
+        <img id="pf-poster-main-pic" src="/media/pics/pulpfiction-poster-unedited.png" alt="pulpfiction-poster"
+            width="320" height="480">
+        <div class="pf-info">
+            <h1 class="pf-title">Pulp Fiction</h1>
+            <p class="pf-desc">
+                Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hitmen who are out to
+                retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has
+                also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be
+                out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight.
+                The lives of these seemingly unrelated people are woven together comprising of a series of funny,
+                bizarre and uncalled-for incidents.
+            </p>
+            <br>
+            Crime · Drama<br>
+            1984 · 2h 34m · 18<br>
+            <span style="background-color: rgb(84, 167, 42);">95</span> Metascore
+            <table>
+                <tr>
+                    <th>Director:</th>
+                    <td>Quentin Tarantino</td>
+                </tr>
+                <tr>
+                    <th>Writer:</th>
+                    <td>Quentin Tarantino · Roger Avary</td>
+                </tr>
+                <tr>
+                    <th>Stars:</th>
+                    <td>John Travolta · Uma Thurman · Samuel L. Jackson</td>
+                </tr>
+                <br>
+            </table>
+            <div class="pf-reviews">
+                <a href="https://www.imdb.com/title/tt1375666/reviews/?ref_=tt_ov_rt">4.8K User reviews</a> ·
+                <a href="https://www.imdb.com/title/tt1375666/externalreviews/?ref_=tt_ov_rt">469 Critic reviews</a>
+            </div>
+        </div>
+    </div>
+    <div class="pf-change-movie-poster">
+        <button class="pf-changeposterbutton"
+            onclick="document.getElementById('pf-poster-main-pic').src='/media/pics/pf-alt-poster-1.jpg'">1</button>
+        <button class="pf-changeposterbutton"
+            onclick="document.getElementById('pf-poster-main-pic').src='/media/pics/pulpfiction-poster-unedited.png'">2</button>
+        <button class="pf-changeposterbutton"
+            onclick="document.getElementById('pf-poster-main-pic').src='/media/pics/pf-alt-poster-2.jpg'">3</button>
+    </div>
+
+    <div class="pf-details">
+        <h2>Details :</h2>
+        <table>
+            <tr>
+                <th>Release Date</th>
+                <td>October 21, 1994 (United Kingdom)</td>
+            </tr>
+            <tr>
+                <th>Country of origin</th>
+                <td>United States</td>
+            </tr>
+            <tr>
+                <th>Languages</th>
+                <td>English · Spanish · French</td>
+            </tr>
+            <tr>
+                <th>Production companies</th>
+                <td>Miramax · A Band Apart · Jersey Films</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pf-extrainfo-button">
+        <h3>Show More Details About The Movie And BTC :
+            <button onclick="toggleDetails2()">Show More</button>
+        </h3>
+    </div>
+    <div id="pf-MoreDetails">
+
+        <p class="pf-extrainfo" style="display: none;">
+        <ul>
+            <li>Director's Vision: Directed by Quentin Tarantino, "Pulp Fiction" is known for its non-linear
+                storytelling and eclectic mix of characters and dialogue. Tarantino aimed to create a postmodern
+                masterpiece that pays homage to various genres while subverting audience expectations.
+            </li> <br>
+            <li>Practical Effects: While "Pulp Fiction" is more dialogue-driven than effects-heavy, Tarantino's
+                attention to detail is evident throughout the film. From the iconic dance scene at Jack Rabbit Slim's to
+                the intense moments of violence, every aspect of the film is meticulously crafted.</li> <br>
+            <li>Soundtrack: "Pulp Fiction" is renowned for its eclectic soundtrack, which includes a mix of surf rock,
+                soul, and pop music. The soundtrack plays a crucial role in setting the tone for each scene and has
+                become synonymous with the film's aesthetic.
+            </li>
+            <li>Critical Reception: Upon its release in 1994, "Pulp Fiction" received widespread critical acclaim, with
+                praise for its innovative storytelling, sharp dialogue, and memorable characters. The film won the Palme
+                d'Or at the Cannes Film Festival and went on to become a cultural phenomenon.</li>
+            <li>Casting: The film features an ensemble cast including John Travolta, Uma Thurman, Samuel L. Jackson,
+                Bruce Willis, and others. Each actor delivered memorable performances, contributing to the film's
+                enduring popularity.
+
+            </li>
+            <li>Legacy: "Pulp Fiction" is often cited as one of the greatest films of all time and has had a significant
+                influence on popular culture. Its impact can be seen in the countless films, TV shows, and works of art
+                that have been inspired by its style and storytelling.</li>
+        </ul>
+        </p>
+    </div>
+
+    <div class="pf-trailer">
+        <h2>Watch The Trailer :</h2>
+        <video id="pf-video-1" width="720px" height="480px" controls>
+            <source src="/media/videos/Pulp-Fiction-Official-Trailer.mp4" video/mp4>
+            Your browser does not support the video tag.
+        </video>
+        <div class="pf-btc-desc">
+            <h3>Full Cast & Crew : </h3>
+            <p>
+                <iframe src="https://www.tvguide.com/movies/pulp-fiction/cast/2030305168/" frameborder="0" width="100%"
+                    height="650px"></iframe>
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="pf-reviews-table">
+        <h2>Read Some Of The Reviews : </h2>
+        <table class="pf-reviews-table">
+            <tr>
+                <th>Username</th>
+                <td>Review</td>
+                <td>Overall Rating</td>
+            </tr>
+            <tr>
+                <th>bevo-13678</th>
+                <td>I like the bit with the cheeseburger. It makes me want to go and get a cheeseburger</td>
+                <td>10/10</td>
+            </tr>
+            <tr>
+                <th>zacharyhamstra</th>
+                <td>Overrated without a doubt, but nevertheless well made</td>
+                <td>6/10</td>
+            </tr>
+            <tr>
+                <th>georgios-christodoulou</th>
+                <td>I can't understand why this film got this high ranking!</td>
+                <td>5/10</td>
+            </tr>
+            <tr>
+                <th>talnavarro</th>
+                <td>One of my favorite movies of all times. i love the acting the directing of it and the idea behind
+                    it!</td>
+                <td>10/10</td>
+            </tr>
+            <tr>
+                <th>auuwws</th>
+                <td>Fun cult film, tad overrated</td>
+                <td>8/10</td>
+            </tr>
+            <tr>
+                <th>wolvesrug</th>
+                <td>Simply The Best</td>
+                <td>10/10</td>
+            </tr>
+            <tr>
+                <th>htethtetsuhlaing</th>
+                <td>Can't help but love it!🖤 bcoz it's good cool brilliant? I watched it over agian and again.</td>
+
+                <td>10/10</td>
+            </tr>
+            <tr>
+                <th>connorveenstra</th>
+                <td>An enjoyable noir story</td>
+                <td>7/10</td>
+            </tr>
+            <tr>
+                <th>maryolalov</th>
+                <td>A true Tarantino classic</td>
+                <td>9/10</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <audio id="pf-audio-1" autoplay loop>
+        <source src="/media/audio/Miserlou.mp3" audio/mp3>
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+
+</html>
